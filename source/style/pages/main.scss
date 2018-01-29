@@ -1,0 +1,19 @@
+.search-section {
+  padding: 20px 0;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-mobile {
+  height: 34px;
+  border: 1px solid #c2aac7;
+  border-radius: 2px;
+  flex-grow: 1;
+  margin-right: 13px;
+  padding-left: 14px;
+  font-family: "HELVETICANEUECYR-ROMAN", sans-serif;
+  font-size: 16px;
+}
