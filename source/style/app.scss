@@ -1,0 +1,26 @@
+//variables
+$violet: #642872;
+$light-violet: #c2aac7;
+$red: #ed232a;
+
+$max-mobile-width: 767px;
+$min-tablet-width: 768px;
+$max-tablet-width: 1099px;
+$min-desktop-width: 1100px;
+
+
+@import "font-awesome/font-awesome";
+@import "common/_mixins";
+@import "common/fonts";
+@import "common/classes";
+@import "common/extends";
+@import "common/animations";
+@import "common/adjustment";
+
+//layout
+@import "layout/common";
+@import "layout/header";
+
+
+//pages
+@import "pages/**/*.scss";

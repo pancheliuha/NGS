@@ -1,0 +1,242 @@
+.header {
+  display: flex;
+  padding-top: 20px;
+  background-color: #fff;
+  padding-bottom: 30px;
+  position: relative;
+  border-bottom: 1px solid #92689c;
+  .header__logo {
+    flex: 0 0 35%;
+    .header__logo-img {
+      width: 100%;
+    }
+  }
+
+  .header__content {
+    flex-grow: 1;
+    @extend %clearfix;
+  }
+
+  .header__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .header-btn__img-type {
+    margin-right: 10px;
+  }
+
+  .header-btn__search {
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: $violet;
+    font-family: 'HELVETICANEUECYR-BOLD', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .header__contacts {
+    margin-left: 13px;
+    float: right;
+    margin-top: 15px;
+  }
+
+  .contacts__head {
+    font-size: 16px;
+    font-family: "ArialBold", sans-serif;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .contacts__content {
+    font-family: "ArialRegular", sans-serif;
+    font-size: 12px;
+    color: #707070;
+    display: block;
+  }
+
+  .contacts__map-link {
+    text-decoration: underline;
+    font-family: "ArialRegular", sans-serif;
+  }
+
+  //nav-menu
+  .header-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $violet;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    transform: translate(0, -1000px);
+    transition: all .3s ease-in;
+
+    &.active {
+      transform: translate(0, 0);
+      transition: all .3s ease-out;
+    }
+  }
+
+  .header-nav__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .nav-list {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .3s;
+
+    &.active {
+      max-height: 500px;
+      transition: max-height 1s;
+    }
+  }
+
+  .main-nav-list {
+    max-height: 1000px;
+    padding-top: 30px;
+    .nav-item {
+      .nav-link {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .nav-list {
+        .nav-item {
+          .nav-link {
+            padding-left: 50px;
+          }
+
+          .nav-list {
+            .nav-item {
+              .nav-link {
+                padding-left: 80px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    transition: all .3s;
+    color: $light-violet;
+    padding: 10px 0;
+    text-decoration: none;
+    font-family: "HELVETICANEUECYR-THIN", sans-serif;
+    font-size: 16px;
+
+    &:hover {
+      background-color: $red;
+      transition: all .3s;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .head-link {
+    color: #fff;
+    font-family: "HELVETICANEUECYR-ROMAN", sans-serif;
+    font-size: 16px;
+    letter-spacing: .5px;
+  }
+}
+
+
+
+
+.square-btn {
+  border: 1px solid $light-violet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  width: 36px;
+  height: 34px;
+
+  @include desktop-mf() {
+    width: 42px;
+    height: 39px;
+  }
+}
+
+
+
+.hamburger {
+  display: inline-block;
+  position: relative;
+  width: 36px;
+  height: 30px;
+
+  @include desktop-mf() {
+    width: 42px;
+    height: 35px;
+  }
+
+  .hamburger-line {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    background-color: $violet;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all .3s;
+    height: 4px;
+
+
+    @include desktop-mf() {
+      height: 5px;
+    }
+  }
+
+  .hamburger__top {
+    top: 0;
+    transform: translate(-50%, 0) rotateZ(0deg);
+  }
+
+  .hamburger__middle {
+    top: 50%;
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+
+  .hamburger__bottom {
+    bottom: 0;
+    transform: translate(-50%, 0) rotateZ(0deg);
+  }
+
+  &.active, &.mobile {
+    .hamburger-line {
+      transition: all .3s;
+      transform-origin: 50% 50%;
+      background-color: #fff;
+    }
+
+    .hamburger__top {
+      top: 50%;
+      transform: translate(-50%, -50%) rotateZ(-45deg);
+      transform-origin: 50% 50%;
+
+    }
+
+    .hamburger__middle {
+      opacity: 0;
+    }
+
+    .hamburger__bottom {
+      bottom: 50%;
+      transform: translate(-50%, 50%) rotateZ(45deg);
+      transform-origin: 50% 50%;
+
+    }
+  }
+
+
+}
