@@ -2,6 +2,7 @@
 $violet: #642872;
 $light-violet: #c2aac7;
 $red: #ed232a;
+$blue-violet: #6555a4;
 
 $max-mobile-width: 767px;
 $min-tablet-width: 768px;
@@ -16,10 +17,14 @@ $min-desktop-width: 1100px;
 @import "common/extends";
 @import "common/animations";
 @import "common/adjustment";
+@import "common/owl.carousel";
+
 
 //layout
 @import "layout/common";
 @import "layout/header";
+@import "layout/footer";
+
 
 
 //pages

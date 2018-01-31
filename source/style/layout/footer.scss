@@ -1,0 +1,134 @@
+.footer {
+  .contacts__head {
+    color: #fff;
+    font-size: 19px;
+    line-height: 19px;
+  }
+  .contacts__content {
+    display: block;
+    color: $light-violet;
+    font-size: 16px;
+  }
+  
+  .contacts__map-link {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: underline;
+    
+    &::before {
+      content: url("../img/icons/location-marker-white.png");
+      display: inline-block;
+      margin-right: 10px;
+      position: relative;
+      top: 10px;
+    }
+  }
+}
+
+.footer-bg {
+  margin-top: -40px;
+  width: 100%;
+  height: 200px;
+  background: url("../img/mobile/footer/footer_mobile_city.png") no-repeat;
+  background-position-y: -83%;
+  background-position-x: 23%;
+  @include laptop-mf() {
+    height: 376px;
+    background: url("../img/desktop/footer/footer_desktop_city.png") no-repeat;
+    background-size: cover;
+    background-position-y: 26px;
+  }
+}
+
+.footer-content {
+  background-color: $violet;
+  padding-top: 33px;
+  @include desktop-mf() {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+}
+
+
+.footer-contacts {
+  padding-bottom: 27px;
+}
+
+.footer-map-menu {
+  display: none;
+  @include laptop-mf() {
+    display: block;
+    padding-bottom: 0;
+  }
+}
+
+
+.footer-contacts__head {
+  font-family: 'HELVETICANEUECYR-BOLD', sans-serif;
+  font-size: 30px;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid $red;
+}
+
+.footer-map {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.footer-mobile-copyright {
+  background-color: $violet;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include laptop-mf() {
+    display: none;
+  }
+}
+
+.footer-mobile-copyright__text {
+  color: $light-violet;
+  display: block;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.footer-mobile-copyright__logo {
+  align-self: flex-end;
+}
+
+//nav-menu-footer
+.footer {
+  .head-link {
+    border-bottom: none;
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  .nav-link {
+    padding: 5px 0;
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+//desktop copyright
+.footer-desktop-copyright {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  @include laptop-mf() {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .footer-mobile-copyright__text {
+    margin-bottom: 13px;
+    margin-right: 40px;
+  }
+}

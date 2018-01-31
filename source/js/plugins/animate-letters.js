@@ -1,18 +1,14 @@
 module.exports = function () {
-    var bannerTexts = $('.banner-text-wrapper').find('.banner-text'),
-        activeText = $('.banner-text-wrapper').find('.banner-text.active');
-
+    var bannerTexts = $('.banner-text-wrapper').find('.banner-text');
 
     setInterval(function () {
-        bannerTexts.each(function (index, text) {
-            if ($(text).hasClass('active')) {
-                $(text).removeClass('active');
-                console.log($(text).next().length);
-                var next = ($(text).next().length) ? $(text).next() : $(bannerTexts[0]);
+        var activeText = $('.banner-text-wrapper').find('.banner-text.active');
+        activeText.removeClass('active');
 
-                next.addClass('active');
-            }
-        });
+        var next = (activeText.next().length) ? activeText.next() : $(bannerTexts[0]);
+        next.addClass('active');
+        console.log(next);
+
     }, 2000);
 
 
